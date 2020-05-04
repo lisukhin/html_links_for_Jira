@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSS Template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Style the header */
+    header {
+      background-color: darkblue;
+      padding: 5px;
+      text-align: left;
+      font-size: 20px;
+      color: white;
+    }
+
+    /* Create two columns/boxes that floats next to each other */
+    nav {
+      float: left;
+      width: 30%;
+      height: 700px; /* only for demonstration, should be removed */
+      background: #ccc;
+      padding: 20px;
+    }
+
+    /* Style the list inside the menu */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    article {
+      float: left;
+      padding: 20px;
+      width: 70%;
+      background-color: #f1f1f1;
+      height: 700px; /* only for demonstration, should be removed */
+    }
+    .dropbtn {
+      background-color: grey;
+      color: white;
+      padding: 5px;
+      font-size: 16px;
+      border: 16px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 8px 8px 16px 8px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+
+    .dropdown-content a {
+      color: #000000;
+      padding: 20px 20px;
+      text-decoration: none;
+      display: block;
+    }
+
+
+
+    .dropdown-content a:hover {background-color: darkblue;}
+
+    .dropdown:hover .dropdown-content {display: block;}
+
+    .dropdown:hover .dropbtn {background-color: darkblue;}
+
+
+    /* Clear floats after the columns */
+    section:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Style the footer */
+    footer {
+      background-color: #777;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+    @media (max-width: 600px) {
+      nav, article {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<header>
+  <h2>Apprise Service Desk portal</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="https://geophy.atlassian.net/browse/AS-132?filter=10200">All bugs</a></li>
+      <li><a href="https://geophy.atlassian.net/browse/AS-84?filter=10201">All bugs in review</a></li>
+      <li><a href="https://geophy.atlassian.net/browse/AS-128?filter=10202">All features</a></li>
+      <li><a href="https://geophy.atlassian.net/browse/AS-120?filter=10203">All bugs reported by Brad</a></li>
+      <li><a href="https://geophy.atlassian.net/browse/AS-73?filter=10204">All bugs in review by Brad</a></li>
+      <li><a href="https://geophy.atlassian.net/browse/AS-128?filter=10202">All features</a></li>
+    </ul>
+  </nav>
+
+  <article>
+
+      <body>
+
+      <h2>Apprise Service Desk portal </h2>
+      <p>Please choose what you want to report.</p>
+      <div>
+        <div class="dropdown">
+          <button class="dropbtn">General</button>
+          <div class="dropdown-content">
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/14">Bug</a>
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/16">Improvement</a>
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/12">Question</a>
+          </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="dropdown">
+          <button class="dropbtn">PR-Overview</button>
+          <div class="dropdown-content">
+            <a href="#">Bug</a>
+            <a href="#">Improvement</a>
+
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">PR-Detail</button>
+          <div class="dropdown-content">
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/14">Bug</a>
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/16">Improvement</a>
+
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">PR-Data Source</button>
+          <div class="dropdown-content">
+            <a href="#">Bug</a>
+            <a href="#">Improvement</a>
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/12">Question</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">PR-Sales</button>
+          <div class="dropdown-content">
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/14">Bug</a>
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/16">Improvement</a>
+
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">PR-Units</button>
+          <div class="dropdown-content">
+            <a href="#">Bug</a>
+            <a href="#">Improvement</a>
+
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">PR-P&Ls</button>
+          <div class="dropdown-content">
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/14">Bug</a>
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/16">Improvement</a>
+
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">PR-Taxes</button>
+          <div class="dropdown-content">
+            <a href="#">Bug</a>
+            <a href="#">Improvement</a>
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/12">Question</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">PR-Photos/Files</button>
+          <div class="dropdown-content">
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/14">Bug</a>
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/16">Improvement</a>
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/12">Question</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">PR-Comments</button>
+          <div class="dropdown-content">
+            <a href="#">Bug</a>
+            <a href="#">Improvement</a>
+
+          </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="dropdown">
+          <button class="dropbtn">A-Overview</button>
+          <div class="dropdown-content">
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/14">Bug</a>
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/16">Improvement</a>
+
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">A-Basic</button>
+          <div class="dropdown-content">
+            <a href="#">Bug</a>
+            <a href="#">Improvement</a>
+            <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/12">Question</a>
+          </div>
+        </div>
+
+
+
+      <div class="dropdown">
+        <button class="dropbtn">A-Sales Grid Logic</button>
+        <div class="dropdown-content">
+          <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/14">Bug</a>
+          <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/16">Improvement</a>
+          <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/12">Question</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">A-Rent Grid Logic</button>
+        <div class="dropdown-content">
+          <a href="#">Bug</a>
+          <a href="#">Improvement</a>
+
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">A-Sales Comps</button>
+        <div class="dropdown-content">
+          <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/14">Bug</a>
+          <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/16">Improvement</a>
+
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">PR-Data Source</button>
+        <div class="dropdown-content">
+          <a href="#">Bug</a>
+          <a href="#">Improvement</a>
+          <a href="https://geophy.atlassian.net/servicedesk/customer/portal/2/group/3/create/12">Question</a>
+        </div>
+      </div>
+
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
+
